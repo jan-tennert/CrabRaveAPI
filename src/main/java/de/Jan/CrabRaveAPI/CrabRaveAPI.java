@@ -17,6 +17,13 @@ public class CrabRaveAPI {
         font = font.substring(1);
     }
 
+    public CrabRaveAPI(String ffmpeg_path, String video, String font) {
+        this.ffmpeg = ffmpeg_path;
+        this.video = video;
+        this.font = font;
+    }
+
+
     public File addText(String text, String color, File output, boolean printOutput) throws IOException {
         if(color == null) color = "white";
         String command = String.format("%s -i \"%s\" -vf drawtext=\"fontfile=%s: \\text='%s': fontcolor=%s: fontsize=24: \\boxborderw=5: x=(w-text_w)/2: y=(h-text_h)/2\" -codec:a copy \"%s\"", ffmpeg, video, font, text, color, output.getAbsolutePath());
