@@ -36,7 +36,7 @@ public class CrabRaveAPI {
     }
 
     public boolean isDone() throws IOException {
-        if(lastOutput != null && lastOutput.exists() && Files.size(Paths.get(lastOutput.toURI())) >= 2480000) {
+        if(lastOutput != null && lastOutput.exists() && Files.size(Paths.get(lastOutput.toURI())) >= 2000000) {
             return true;
         } else {
             return false;
