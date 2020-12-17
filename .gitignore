@@ -1,2 +1,11 @@
 # Project exclude paths
 /target/
+.idea/.gitignore
+.idea/checkstyle-idea.xml
+.idea/compiler.xml
+.idea/discord.xml
+.idea/jarRepositories.xml
+.idea/misc.xml
+CrabRaveAPI.iml
+src/test/
+.idea/vcs.xml
